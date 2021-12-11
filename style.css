@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
+
+* {
+	box-sizing: border-box;
+    font-family: 'Outfit',sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url("background.jpg");
+	background-size: cover;
+}
+
+h1 {
+	display: inline-block;
+	width: 2ch;
+	text-align: center;
+    font-size: 2rem;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 500px;
+	height: 350px;
+    border-radius: 50px;
+    padding: 2em;
+
+	background: rgba(20, 32, 32,.8);
+    border: 2px solid rgba(0,0,0,.18);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.5);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+	
+}
+
+.radio-container {
+	display: flex;
+	flex: 1;
+	align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+label{
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    border: 2px solid rgb(63, 219, 66);
+    border-radius: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    transition: all 0.3s ;
+}
+
+label:hover{
+    background-color: rgb(63, 219, 66);
+}
+
+input[type="radio"]:checked + label{
+    background-color: rgb(63, 219, 66);
+}
+
+.button-container {
+	flex: 1;
+    display: flex;
+	justify-content: center;
+	align-items: center;    
+}
+
+.play-button{
+    cursor: pointer;
+    padding: 10px 130px;
+    font-size: 1.5rem;
+    color: rgb(63, 219, 66);
+    border-radius: 30px;
+    border: 2px solid rgb(63, 219, 66);
+    background: none;
+    transition: .3s;
+}
+
+.play-button:hover{
+    background:rgb(63, 219, 66);
+    color: white;
+}
+
+.play-button:focus{
+    animation: anim-shadow .3s forwards 2 alternate;
+}
+
+@keyframes anim-shadow {
+    100%{
+        box-shadow: 0px 0px 40px 10px rgba(148, 253, 9, 0.1);
+    }
+    
+}
+
+.count-container {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.player-count{
+    color: rgb(63, 219, 66);
+}
+
+.computer-count{
+    color: rgb(255, 15, 92);
+}
+

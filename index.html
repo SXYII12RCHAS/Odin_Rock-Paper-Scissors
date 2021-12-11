@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<section class="radio-container">
+				<input type="radio" name="radio-group" id="scissors" />
+				<label
+					for="scissors"
+					style="
+						background-image: url('https://img.icons8.com/ios-filled/50/ffffff/hand-scissors--v1.png');
+					"
+					onclick="player = 'scissors'"
+				></label>
+				<input type="radio" name="radio-group" id="rock" />
+				<label
+					for="rock"
+					style="
+						background-image: url('https://img.icons8.com/ios-glyphs/60/ffffff/clenched-fist.png');
+					"
+					onclick="player = 'rock'"
+				></label>
+				<input type="radio" name="radio-group" id="paper" />
+				<label
+					for="paper"
+					style="
+						background-image: url('https://img.icons8.com/ios-filled/50/ffffff/hand.png');
+					"
+					onclick="player = 'paper'" 
+				></label>
+			</section>
+
+			<section class="button-container">
+				<button class="play-button" onclick="Round();">Play</button>
+			</section>
+
+			<section class="count-container">
+				<h1 class="player-count">0</h1>
+				<h1 style="color: white">:</h1>
+				<h1 class="computer-count">0</h1>
+			</section>
+		</div>
+	</body>
+	<script src="rps.js"></script>
+</html>
